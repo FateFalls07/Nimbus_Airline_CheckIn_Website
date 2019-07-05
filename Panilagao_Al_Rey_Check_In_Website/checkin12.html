@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1024">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"> -->
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Panilagao_Al_Rey_checkin</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css">
+        <link rel = "stylesheet" type = "text/css" href="web1.css">
+        <link rel="icon" href="Images/logo1.png" type="image/png">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    </head>
+    <body>
+        <!--Top Part / Settings-->
+        <div class="container" style="position: relative">
+            <div class = "head1">
+                <div class = "set1">
+                    <button class="btn1 lang" onclick="location.href='#reglang'"><i class="fa fa-caret-down" id = "lang2"> <u style="font-family: Arial, Helvetica, sans-serif; font-weight: normal"><b>Region / Language</b></u></i></button>
+                </div>
+                <div class = "set2">
+                    <button class="btn1 lang" onclick="location.href='#join'"><b>Join Now</b></button>
+                    <!-- <a href = "#login" class = "btn1 lang">Login</a> -->
+                </div>
+                <div class = "lel" style="display: inline; color: #ffffff; float: right; margin-top: 0px">
+                     | 
+                </div>
+                <div class = "set2">
+                    <button type = "button" class="btn1 lang" data-target="#exampleModal" data-toggle="modal"><b>Login</b></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container">
+            <div class ="row">
+                <div class = "navigationbar1">
+                    <div class = "col">
+                        <div class ="imglogo" >
+                            <a href = "#home"><img id = "logo1" src = "Images/mylogo.png" alt = "logo dapat dito" height = "80" width = "200"></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class = "menu1"> -->
+                            <!-- <a href = "#home" class = "menu2 btn"><i class="fa fa-home" aria-hidden="true"> HOME</i></a> -->
+                            <!-- <a href = "index-m.html" target = "_blank" class = "menu2 btn2"><i class="fa fa-calendar-check-o" aria-hidden="true"> <p style = "font-family: Arial, Helvetica, sans-serif; display: inline"> Check In</p></i></a> -->
+                            <!-- <a href = "#bagserv" class = "menu2 btn2"><i class="fa fa-suitcase" aria-hidden="true"><p style = "font-family: Arial, Helvetica, sans-serif; display: inline"> Baggage Services</p></i></a>
+                            <a href = "#contact" class = "menu2 btn2"><i class="fa fa-phone" aria-hidden="true"> <p style = "font-family: Arial, Helvetica, sans-serif; display: inline">Contact Us</p></i></a>
+                            <div class = "menu2">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!--Login Modal -->
+        <form name="logForm" method="GET" id = "loginnow1" action="login1.html" onsubmit="validatelogin()">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style = "margin-top: 80px">
+                <div class="modal-dialog" role="document" style="border: none">
+                    <div class="modal-content" style="border: none">
+                    <div class="modal-header" style="background-color: #004C5F; border: none">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color:#ffffff"><b>LOGIN</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style = "background-color: #ffffff; border: none">
+
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label" style= "color: #004C5F"><b>Username:</b></label>
+                            <input type="text" class="form-control" name = "usern1" id="uname" style="border-color: #004C5F" placeholder="Input username" required>
+                            <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "unamevalid"><b><i></i></b></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label" style= "color: #004C5F"><b>Password:</b></label>
+                            <input type="password" class="form-control" name = "pwlog" id="pw1" style="border-color: #004C5F" placeholder="Input password" required>
+                            <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "pwvalid"><b><i></i></b></p>
+                        </div>
+
+                    <div class = "fpw" style="display: inline-block; width: auto; padding: 1px; font-size: 12px; float: right">
+                        <a href = "fpw.html" target="_blank" style= "color: #004C5F">Forgot Password?</a>
+                    </div>
+                    </div>
+                    <div class="modal-footer" style = "background-color: #ffffff; border: none">
+                        <!-- data-dismiss="modal" -->
+                        <button type="submit" class="btn btn-secondary" style="background-color: #004C5F">Login</button> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--MY NAVIGATION BAR-->
+        <nav class="navbar navbar-expand-lg navbar-light navigationbar1" style="position: fixed">
+            <div class ="imglogo" style = "margin-top: 40px">
+                <div class = "media">
+                    <a href = "index-w.html"><img id = "logo1" src = "Images/mylogo.png" alt = "logo dapat dito" height = "80" width = "200"></a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color: #004C5F"></span>
+            </button>
+            <div class="collapse navbar-collapse menu1" id="navbarNavDropdown" style = "background-color: #004C5F; margin-left: 550px">
+                <ul class="navbar-nav">
+                <li class="nav-item active dropdown">
+                    <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+                    <a href = "#bagserv" class = "menu2 btn2 nav-link dropdown-toggle" style="color: #ffffff" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-suitcase" aria-hidden="true"><p style = "font-family: Arial, Helvetica, sans-serif; display: inline; font-weight: normal"> Baggage Services<span class="sr-only">(current)</span></p></i></a>
+                    <div class="dropdown-menu" style="margin-top: 17px; border-radius: 0px; padding: 0px; border: none" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item d1" href="pb.html">Prepaid Baggage</a>
+                        <a class="dropdown-item d1" href="ba.html">Baggage Allowances</a>
+                        <a class="dropdown-item d1" href="bta.html">Baggage Tracking and Assistance</a>
+                        <a class="dropdown-item d1" href="restitem.html">Restricted Items</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                        <a href = "contactus.html" class = "menu2 btn2 nav-link" style="color: #ffffff"><i class="fas fa-phone" aria-hidden="true"> <p style = "font-family: Arial, Helvetica, sans-serif; display: inline; font-weight: normal">Contact Us</p></i></a>
+                </li>
+                </ul>
+            </div>
+            <form class="form-inline">
+                    <input class="form-control mr-sm-2 shadow-none" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 shadow-none" style="background-color: #004C5F; color: #ffffff; border-color: #ffffff" type="submit">Search</button>
+            </form>
+        </nav>
+
+
+        <div class="container" style="display: inline">
+            <div class = "titel card">
+                <label style="color: #004C5F"><h4>Online Check In</h4></label>
+            </div>
+            <div class = "bookorcheck card">
+                <label>Booking Reference: <span class = "ref text-right" id = "brfid" style="color: #004C5F; width: auto"><b></b></span></label>
+            </div>
+        </div>
+
+        <!-- <div class="container">
+            
+        </div> -->
+
+        <div class="container-fluid">
+            <div class = "boxall">
+                <div class = "headd1">
+                    <div class = "first" id = "pointera">
+                        <label class = "sp" style ="color: #ffffff"><b>Select Passenger/s</b></label>
+                    </div>
+                    <div class = "second" id = "pointer1a">
+                        <label class = "pi" style ="color: #ffffff"><b>Passport Information</b></label>
+                    </div>
+                    <div class = "third" id = "pointer2a">
+                        <label class = "rd" style ="color: #004C5F"><b>Review Details</b></label>
+                    </div>
+                    <div class = "fourth" id = "pointer3">
+                        <label class = "conf" style ="color: #004C5F"><b>Confirmation</b></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "container">
+            <div class = "api1">
+                <h5 style="color: #004C5F; font-family:Arial, Helvetica, sans-serif"><i>Provide Advanced Passenger Information (API)</i></h5>
+            </div>
+            <div class = "api2">
+                <p style = "font-size: 13px">Nimbus required by one or more countries in your itinerary to collect Advance Passenger Information from all passengers prior to travel. Providing information here will save you time at the airport. Click <span style = "color: #004C5F"><b>Save</b></span> and <span style = "color: #004C5F"><b>Continue</b></span> to complete the process (if you are travelling alone) or to enter API for other passengers on this itinerary.</p>
+            </div>
+        </div>
+
+        <div class = "container">
+            <div class = "lejend1">
+                <label style="font-size: 13px; color: #ffffff"><b>Passenger/s</b></label>
+            </div>
+            <button class="lejend2" onclick="savage1()">
+                <div class = "legend22">
+                    <label class = "lejend21" style="font-size: 14px; color: #004C5F"><b>Mr. Kit Harrington</b></label>
+                </div>
+                <div class ="status21">
+                    <label style="color: grey; font-size: 12px">Incomplete</label>
+                </div>
+                <div class = "arrow21">
+                    <label style="color: #004C5F; font-size: 22px; cursor: pointer"><b>></b></label>
+                </div>
+            </button>
+            <button class = "lejend3" onclick="savage()">
+                <div class = "legend22">
+                    <label class = "lejend212" style="font-size: 14px; color: #004C5F"><b>Mr. Stephen Hawkings</b></label>
+                </div>
+                <div class ="status21">
+                    <label style="color: grey; font-size: 12px">Incomplete</label>
+                </div>
+                <div class = "arrow21">
+                    <label style="color: #004C5F; font-size: 22px; cursor: pointer"><b>></b></label>
+                </div>
+            </button>
+        </div>
+        <div class = "container">
+            <div class = "infut">
+                <div class ="infuthead shadow-sm">
+                    <label class = "infut1" id = "infutnew"><b>Advanced Passenger Information for Kit Harrington</b></label>
+                </div>
+                <div class ="instruck">
+                    <p style="color: #004C5F; font-size: 12px">Please make sure that the name you enter matches the name on your passport</p>
+                </div>
+            <form id = "ultra" onsubmit="save12()" method="GET" name="advancep1" action="checkin12.html">
+                <div class = "infutform">
+                    <div class="md-form form-group w-50">
+                        <label for="lname1" class="col-form-label" style= "color: #004C5F; margin-top: 10px; margin-left: 20px; font-size: 13px"><b>Last Name <span style="color: #cc1e1e; font-size: 14px">*</span></b></label>
+                        <input type="text" class="form-control required" name = "plast1" id="plast2" style="border-color: #004C5F; margin-left: 20px" placeholder="Input Last Name" required>
+                        <!-- <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "unamevalid"><b><i></i></b></p> -->
+                    </div>
+                    <div class="md-form form-group w-50">
+                        <label for="mname1" class="col-form-label" style= "color: #004C5F; margin-top: -5px; margin-left: 20px; font-size: 13px"><b>Middle Name</b></label>
+                        <input type="text" class="form-control" name = "pmid1" id="pmid2" style="border-color: #004C5F; margin-left: 20px" placeholder="Input Middle Name">
+                        <!-- <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "unamevalid"><b><i></i></b></p> -->
+                    </div>
+                    <div class="md-form form-group w-50">
+                        <label for="fname1" class="col-form-label" style= "color: #004C5F; margin-top: -5px; margin-left: 20px; font-size: 13px"><b>First Name <span style="color: #cc1e1e; font-size: 14px">*</span></b></label>
+                        <input type="text" class="form-control required" name = "pfn1" id="pfn2" style="border-color: #004C5F; margin-left: 20px" placeholder="Input First Name" required>
+                        <!-- <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "unamevalid"><b><i></i></b></p> -->
+                    </div>
+                    <label for="gend1" class="col-form-label" style= "color: #004C5F; display: inline-block; margin-top: -5px; margin-left: 20px; font-size: 13px"><b>Gender <span style="color: #cc1e1e; font-size: 14px">*</span></b></label><br>
+                    <div class="form-check" style="display: inline-block">
+                        <input style = "margin-left:-10px" class="form-check-input" type="radio" name="gendmf" id="male2" value = "1" required>
+                        <label style="margin-left: 30px; color: #004C5F" class="form-check-label" for="exampleRadios1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check" style="display: inline">
+                        <input style = "margin-left: 0px" class="form-check-input" type="radio" name="gendmf" id="female2" value = "2" required>
+                        <label style="margin-left: 50px; color: #004C5F" class="form-check-label" for="exampleRadios1">
+                            Female
+                        </label>
+                    </div>
+                    <br>
+                    <label for="dob" class="col-form-label" style= "color: #004C5F; display: inline-block; margin-top: 10px; margin-left: 20px; font-size: 13px"><b>Date of Birth <span style="color: #cc1e1e; font-size: 14px">*</span></b></label><br>
+                    <div class="md-form w-50" style="margin-left: 20px">
+                        <input placeholder="Selected date" type="date" id="bd1" class="form-control datepicker required" style="border-color: #004C5F" required>
+                    </div>
+                    <div class="md-form form-group w-50">
+                        <label for="passno" class="col-form-label" style= "color: #004C5F; margin-top: 10px; margin-left: 20px; font-size: 13px"><b>Passport Number <span style="color: #cc1e1e; font-size: 14px">*</span></b></label>
+                        <input type="text" class="form-control" name = "pp2" id="pp1" style="border-color: #004C5F; margin-left: 20px" placeholder="Input Passport Number" required>
+                        <!-- <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "unamevalid"><b><i></i></b></p> -->
+                    </div>
+                    <div class="form-group w-50">
+                        <label for="passno" class="col-form-label" style= "color: #004C5F; margin-top: 0px; margin-left: 20px; font-size: 13px"><b>Nationality (country)<span style="color: #cc1e1e; font-size: 14px">*</span></b></label>
+                        <input type="text" id = "natnat" class = "form-control" list = "nat1"  style="margin-left: 20px; border-color: #004C5F" placeholder = "Select Nationality" required>
+                        <datalist id="nat1" placeholder = "Select Nationality">
+                            <option value="" disabled selected>Select your Nationality</option>
+                            <option value = "Filipino"></option>
+                            <option value = "American"></option>
+                            <option value = "Indian"></option>
+                            <option value = "Korean"></option>
+                            <option value = "Chinese"></option>
+                            <option value = "Japanese"></option>
+                        </datalist>
+                    </div>
+
+                    <label class="col-form-label" style= "color: #004C5F; margin-left: 20px; font-size: 13px"><b>Emergency Contact Details </b><span style="font-size: 12px; margin-left: 3.5px"> (Must not be a traveller in this booking)</span></label><br>
+
+                    <input type="checkbox" class="form-check-input" value = "1" style="margin-left: 20px; margin-top: 7px" id="disabledemerge" onclick="disabled13()">
+                    <label style="font-size: 13px; color: #004C5F; margin-left: 40px" class = "form-check-label" for="exampleCheck1">I elect not to provide this information</label>
+
+                    <div class="md-form form-group w-50">
+                        <label for="passno" class="col-form-label" style= "color: #004C5F; margin-left: 20px; margin-top: 10px; font-size: 13px"><b>Full Name <span style="color: #cc1e1e; font-size: 14px">*</span></b></label>
+                        <input type="text" class="form-control" name = "en1" id="en2" style="border-color: #004C5F; margin-left: 20px" placeholder="Input Full Name">
+                        <!-- <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "unamevalid"><b><i></i></b></p> -->
+                    </div>
+
+                    <div class="md-form form-group w-50">
+                        <label for="passno" class="col-form-label" style= "color: #004C5F; margin-left: 20px; margin-top: 0px; font-size: 13px"><b>Contact Number <span style="color: #cc1e1e; font-size: 14px">*</span></b></label>
+                        <input type="text" class="form-control" name = "cn1" id="cn2" style="border-color: #004C5F; margin-left: 20px" placeholder="Input Contact Number">
+                        <!-- <p style="color: #cc1e1e ; font-size: 10px; margin-top: 4px" id = "unamevalid"><b><i></i></b></p> -->
+                    </div>
+
+                    <div class = "ditoka1">
+                        <button class="btn btn-outline-success shadow-none" type="submit"><b>Save</b></button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+
+        <div class = "ditoka2">
+            <button id = "continue12" class="btn btn-outline-info shadow-none" type="submit" onclick="val12()"><b>Continue ></b></button>
+        </div>
+    
+        <div class = "ditokansel2">
+            <button id = "cancel12" class="btn btn-outline-danger shadow-none" type="submit" onclick="aryusure()"><b>< Back</b></button>
+        </div>
+
+        <!--FOOTER-->
+        <div class = "container-fluid" style="position: relative">
+            <div class = "footer13" id = "footer">
+                <div class="card cardput1" style="width: 12rem;" style="padding: 0px; display: inline-block">
+                    <div class="card-body" style="display:inline-block; padding: 0px; border: none">
+                        <h6 style="color: #004C5F; padding-left: 40px"><b>About Nimbus Air</b></h6>
+                        <ul class = "putter1">
+                            <li><a href="#history" class = "putter2" target="_blank" style="display: inline-block">History and Milestones</a></li>
+                            <li><a href="#news"  class = "putter2" target="_blank" style="display: inline-block">News and Events</a></li>
+                            <li><a href="#promos"  class = "putter2" target="_blank" style="display: inline-block">Promos</a></li>
+                            <li><a href="#legal notices" class = "putter2" target="_blank">Legal Notices</a></li>
+                            <li><a href="#careers"  class = "putter2" target="_blank">Careers</a></li>
+                        </ul>
+                    </div>  
+                </div>
+                <div class="card cardput2" style="width: 12rem;" style="padding: 0px; display: inline-block">
+                    <div class="card-body" style="display:inline-block; padding: 0px; border: none">
+                        <h6 style="color: #004C5F; padding-left: 40px"><b>Terms and Policies</b></h6>
+                        <ul class = "putter1">
+                            <li><a href="#privacy" class = "putter2" target="_blank" style="display: inline-block">Privacy Policies</a></li>
+                            <li><a href="#terms1"  class = "putter2" target="_blank" style="display: inline-block">Terms of Use</a></li>
+                            <li><a href="#terms2"  class = "putter2" target="_blank" style="display: inline-block">Terms of Carriage</a></li>
+                            <li><a href="#terms3" class = "putter2" target="_blank">Tarmac Delay</a></li>
+                            <li><a href="#terms4"  class = "putter2" target="_blank">Tariffs</a></li>
+                        </ul>
+                    </div>  
+                </div>
+                <div class="card cardput3" style="width: 12rem;" style="padding: 0px; display: inline-block">
+                    <div class="card-body" style="display:inline-block; padding: 0px; border: none">
+                        <h6 style="color: #004C5F; padding-left: 40px"><b>Quick Links</b></h6>
+                        <ul class = "putter1">
+                            <li><a href="#timetable" class = "putter2" target="_blank" style="display: inline-block">Timetable</a></li>
+                            <li><a href="#taxes"  class = "putter2" target="_blank" style="display: inline-block">Taxes, Fees and Surcharges</a></li>
+                            <li><a href="#terminal"  class = "putter2" target="_blank" style="display: inline-block">Know your Terminal</a></li>
+                            <li><a href="#planes" class = "putter2" target="_blank">Know our Planes</a></li>
+                            <li><a href="#faqs"  class = "putter2" target="_blank">FAQs</a></li>
+                        </ul>
+                    </div>  
+                </div>
+                <div class="card cardput4" style="width: 15rem;" style="padding: 0px; display: inline; border: 1px solid black">
+                    <div class="card-body" style="display:inline; padding: 0px; border: none">
+                        <h6 style="color: #004C5F; padding-left: 20px"><b>Connect with Us</b></h6>
+                        <div class = "marginicon">
+                            <i class="fab fa-facebook-f fa-2x marginicon putter2" aria-hidden="true"></i>
+                            <i class="fab fa-twitter fa-2x marginicon putter2" aria-hidden="true"></i>
+                            <i class="fab fa-instagram fa-2x marginicon putter2" aria-hidden="true"></i>
+                            <i class="fab fa-youtube fa-2x marginicon putter2" aria-hidden="true"></i>
+                            <span class="hidden1" style="display: inline-block; color:  #e5e5ea">A</span>
+                            <!-- <span class="hidden1" style="display: inline-block; color:  #e5e5ea; font-size: 8.5px">A</span> -->
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer class = "page-footer">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/js1.js"></script>
+    </footer>
+</html>
+
